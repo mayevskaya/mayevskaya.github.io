@@ -1,0 +1,26 @@
+* {
+    font-family: "Microsoft YaHei",Arial,sans-serif;
+}
+body {
+    background: #061c2d;
+    color: #d7e7f3;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    line-height: 33px;
+
+    text-align: center;
+}
+div.block {
+    position: relative;
+    height: 80vh;
+    padding: 20vh 15vw 0 15vw;
+    text-align: center;
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 4em;
+    font-weight: 200;
+    line-height: normal;
+}
