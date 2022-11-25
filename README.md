@@ -1,1 +1,1 @@
-# mayevskaya.github.io
+Personal achievements website
