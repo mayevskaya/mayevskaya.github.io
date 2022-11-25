@@ -1,20 +1,19 @@
 * {
     font-family: "Microsoft YaHei",Arial,sans-serif;
+    scroll-behavior: smooth;
 }
 body {
     background: #061c2d;
     color: #d7e7f3;
-
     font-family: 'Work Sans', sans-serif;
     font-size: 22px;
     line-height: 33px;
-
     text-align: center;
 }
 div.block {
     position: relative;
-    height: 80vh;
-    padding: 20vh 15vw 0 15vw;
+    height: 90vh;
+    padding: 10vh 15vw 0 15vw;
     text-align: center;
 }
 h1 {
@@ -23,4 +22,37 @@ h1 {
     font-size: 4em;
     font-weight: 200;
     line-height: normal;
+}
+h2 {
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: 100;
+    color: #779dba;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+div.block svg
+{
+    position: absolute;
+    width: 30px;
+    bottom: 30px;
+    animation: chevronAnimation 4s ease-in-out 0s infinite;
+}
+div.block svg path
+{
+    fill: #7e9aae;
+}
+@keyframes chevronAnimation {
+    0% {
+        transform: translate(0,0) scale(1.0,1.0);
+    }
+    50% {
+        transform: translate(0,5px) scale(0.8,0.8);
+    }
+    100% {
+        transform: translate(0,0) scale(1.0,1.0);
+    }
+}
+button {
+    background: none;
+    border: none;
 }
