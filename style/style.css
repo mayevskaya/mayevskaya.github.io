@@ -1,22 +1,30 @@
 * {
-    font-family: "Microsoft YaHei",Arial,sans-serif;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
     scroll-behavior: smooth;
 }
 body {
     background: #061c2d;
     color: #d7e7f3;
     font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
-    line-height: 33px;
-    text-align: center;
+    font-size: 120%;
+    margin: 0;
 }
 div.block {
+    height: 100vh;
     position: relative;
-    height: 90vh;
-    padding: 10vh 15vw 0 15vw;
+    padding-top: 1%;
     text-align: center;
 }
+div.block:nth-child(2n) {
+    background: hsl(205, 84%, 14%);
+}
+div.block:nth-child(3n) {
+    background: hsl(205, 90%, 22%);
+}
 h1 {
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 4em;
@@ -24,33 +32,25 @@ h1 {
     line-height: normal;
 }
 h2 {
+    max-width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
     font-size: 1.2em;
-    line-height: 1em;
+    line-height: 1.2em;
     font-weight: 100;
     color: #779dba;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 div.block svg
 {
-    position: absolute;
+    padding-top: 150%;
+    position: relative;
     width: 30px;
-    bottom: 30px;
-    animation: chevronAnimation 4s ease-in-out 0s infinite;
+    bottom: -10vh;
 }
 div.block svg path
 {
     fill: #7e9aae;
-}
-@keyframes chevronAnimation {
-    0% {
-        transform: translate(0,0) scale(1.0,1.0);
-    }
-    50% {
-        transform: translate(0,5px) scale(0.8,0.8);
-    }
-    100% {
-        transform: translate(0,0) scale(1.0,1.0);
-    }
 }
 button {
     background: none;
