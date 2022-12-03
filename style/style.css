@@ -41,15 +41,23 @@ h2 {
     color: #779dba;
     -webkit-font-smoothing: subpixel-antialiased;
 }
-div.block svg
-{
-    padding-top: 150%;
+div.block svg {
     position: relative;
     width: 30px;
-    bottom: -10vh;
+    animation: chevronAnimation 4s ease-in-out 0s infinite;
 }
-div.block svg path
-{
+@keyframes chevronAnimation {
+    0% {
+        transform: translate(0,0) scale(1.0,1.0);
+    }
+    50% {
+        transform: translate(0,5px) scale(0.8,0.8);
+    }
+    100% {
+        transform: translate(0,0) scale(1.0,1.0);
+    }
+}
+div.block svg path {
     fill: #7e9aae;
 }
 button {
