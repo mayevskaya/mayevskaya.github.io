@@ -7,35 +7,37 @@
     <title>Alice Mayevskaya</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="src/img/icon.png">
+    <!-- Import jQuery for scroll animation -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Scroll button logic itself -->
+    <script src="src/script.js"></script>
 </head>
 <body>
 <div class="block">
     <h1>Development portfolio</h1>
     <h2>Alice Mayevskaya</h2>
     <h2 style="text-transform: uppercase; padding-bottom: 8%;">Student / Data Scientist</h2>
-    <button onClick="scrollingTo(610, 650)">
+    <button onClick="doScrolling('#resume', 750)">
         <svg viewBox="0 0 60 60">
-        <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
-    </svg>
+            <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
+        </svg>
     </button>
 </div>
-<div class="block">
+<div class="block" id="resume">
     <h1>Resume</h1>
     <h2>Hi, I'm Alice! I am a Data Science (DS) student. Though I'm not much experienced in DS yet,
     I already got some simple neural-network-based projects in my portfolio.</h2>
-    <button onClick="scrollingTo(1500, 1000)">
+    <button onClick="doScrolling('#portfolio', 900)">
         <svg viewBox="0 0 60 60">
-        <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
-    </svg>
+            <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
+        </svg>
     </button>
 </div>
-<div class="block">
+<div class="block" id="portfolio">
     <h1>Portfolio</h1><br>
     <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=mayevskaya&repo=mayevskaya.github.io&theme=cobalt" />
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=mayevskaya&repo=mayevskaya.github.io&theme=cobalt" />
     </a>
 </div>
-<script src="src/script.ts">
-</script>
 </body>
 </html>
