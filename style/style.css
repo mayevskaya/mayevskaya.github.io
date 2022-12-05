@@ -7,7 +7,6 @@ body {
     color: #d7e7f3;
     font-family: 'Work Sans', sans-serif;
     font-size: 120%;
-    margin: 0;
 }
 div.block {
     height: 100vh;
@@ -23,8 +22,7 @@ div.block:nth-child(3n) {
 }
 h1 {
     padding-top: 10%;
-    padding-right: 10%;
-    padding-left: 10%;
+    display: inline-flex;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 4em;
@@ -44,6 +42,7 @@ h2 {
 div.block svg {
     position: relative;
     width: 30px;
+    margin-bottom: 10px;
     animation: chevronAnimation 4s ease-in-out 0s infinite;
 }
 @keyframes chevronAnimation {
@@ -63,4 +62,27 @@ div.block svg path {
 button {
     background: none;
     border: none;
+}
+
+/* --- Adaptive markup for mobile devices --- */
+
+/* Wide */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 105%;
+    }
+}
+
+/* Medium */
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 95%;
+    }
+}
+
+/* Small */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 85%;
+    }
 }

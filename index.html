@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" user-scalable="yes" initial-scale="1.0">
     <title>Alice Mayevskaya</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="src/img/icon.png">
@@ -21,7 +21,7 @@
 </div>
 <div class="block">
     <h1>Resume</h1>
-    <h2 style="padding-bottom:8%">Hi, I'm Alice! I am a Data Science (DS) student. Though I'm not much experienced in DS yet,
+    <h2>Hi, I'm Alice! I am a Data Science (DS) student. Though I'm not much experienced in DS yet,
     I already got some simple neural-network-based projects in my portfolio.</h2>
     <button onClick="scrollingTo(1500, 1000)">
         <svg viewBox="0 0 60 60">
@@ -30,33 +30,12 @@
     </button>
 </div>
 <div class="block">
-    <h1>Portfolio</h1>
+    <h1>Portfolio</h1><br>
     <a href="https://github.com/anuraghazra/github-readme-stats">
     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=mayevskaya&repo=mayevskaya.github.io&theme=cobalt" />
     </a>
 </div>
-<script>
-function scrollingTo(elementY, duration) { 
-    var startingY = window.pageYOffset;
-    var diff = elementY - startingY;
-    var start;
-
-    // Bootstrap animation - it will get called right before next frame shall be rendered.
-    window.requestAnimationFrame(function step(timestamp) {
-        if (!start) start = timestamp;
-        // Elapsed milliseconds since start of scrolling.
-        var time = timestamp - start;
-        // Get percent of completion in range [0, 1].
-        var percent = Math.min(time / duration, 1);
-
-        window.scrollTo(0, startingY + diff * percent);
-
-        // Proceed with animation as long as we wanted it to.
-        if (time < duration) {
-        window.requestAnimationFrame(step);
-    }
-  })
-}
+<script src="src/script.ts">
 </script>
 </body>
 </html>
