@@ -9,15 +9,15 @@ body {
     font-size: 120%;
 }
 div.block {
-    height: 100vh;
-    position: relative;
-    padding-top: 1%;
+    min-height: 100vh;
+    width: 100%;
+    position:relative;
     text-align: center;
 }
-div.block:nth-child(2n) {
+div.block:nth-child(2) {
     background: hsl(205, 84%, 14%);
 }
-div.block:nth-child(3n) {
+div.block:nth-child(3) {
     background: hsl(205, 90%, 22%);
 }
 h1 {
@@ -42,7 +42,6 @@ h2 {
 div.block svg {
     position: relative;
     width: 30px;
-    margin-bottom: 10px;
     animation: chevronAnimation 4s ease-in-out 0s infinite;
 }
 @keyframes chevronAnimation {
