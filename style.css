@@ -10,9 +10,9 @@ body {
 }
 div.block {
     min-height: 100vh;
-    width: 100%;
-    position:relative;
+    position: relative;
     text-align: center;
+    padding-bottom: 0;
 }
 div.block:nth-child(2) {
     background: hsl(205, 84%, 14%);
@@ -21,7 +21,7 @@ div.block:nth-child(3) {
     background: hsl(205, 90%, 22%);
 }
 h1 {
-    padding-top: 10%;
+    margin-top:30vh;
     display: inline-flex;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -39,31 +39,28 @@ h2 {
     color: #779dba;
     -webkit-font-smoothing: subpixel-antialiased;
 }
-div.block svg {
-    position: relative;
+svg {
+    position: absolute;
     width: 30px;
-    animation: chevronAnimation 4s ease-in-out 0s infinite;
-}
-@keyframes chevronAnimation {
-    0% {
-        transform: translate(0,0) scale(1.0,1.0);
-    }
-    50% {
-        transform: translate(0,5px) scale(0.8,0.8);
-    }
-    100% {
-        transform: translate(0,0) scale(1.0,1.0);
-    }
-}
-div.block svg path {
-    fill: #7e9aae;
-}
-button {
-    background: none;
-    border: none;
+    bottom: -18vw;
 }
 
-/* --- Adaptive markup for mobile devices --- */
+/* Wheel animation */
+/* Cred: https://codepen.io/bk4d/pen/oKZZBa */
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(100px);
+	}
+}
+svg #wheel {
+	animation: scroll ease 1.5s infinite;
+}
+
+/* --- Adaptive markup for small devices --- */
 
 /* Wide */
 @media screen and (max-width: 1024px) {
