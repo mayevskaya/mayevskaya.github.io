@@ -45,6 +45,11 @@ svg {
     bottom: -18vw;
 }
 
+a img {
+    display: inline-flex;
+    margin: auto;
+}
+
 /* Wheel animation */
 /* Cred: https://codepen.io/bk4d/pen/oKZZBa */
 
