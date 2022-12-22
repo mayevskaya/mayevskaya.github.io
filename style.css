@@ -13,8 +13,6 @@ div.block {
     min-height: 100vh;
     position: relative;
     text-align: center;
-}
-div.block:nth-child(1) {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -22,31 +20,35 @@ div.block:nth-child(1) {
 }
 div.block:nth-child(2) {
     background: hsl(205, 84%, 14%);
+    flex-direction: row;
 }
 div.block:nth-child(3) {
     background: hsl(205, 90%, 22%);
+    display: block;
 }
 
 h1 {
     display: inline-flex;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 4em;
+    font-size: 4.6em;
     font-weight: 200;
-    line-height: normal;
 }
 h2 {
+    position: relative;
+    bottom: 30px;
     max-width: 50%;
     padding-left: 25%;
     padding-right: 25%;
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 1.5em;
     font-weight: 400;
-    color: #779dba;
+    color: #93c2e5;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 h3 {
     text-transform: lowercase;
+    position: relative;
+    bottom: 30px;
     max-width: 50%;
     padding-left: 25%;
     padding-right: 25%;
@@ -63,9 +65,13 @@ a img {
 }
 
 svg {
-    position: absolute;
+    position: relative;
     width: 30px;
-    bottom: -18vw;
+}
+
+.bottom-block {
+    position: absolute;
+    bottom: 5%;
 }
 
 /* Wheel animation */
@@ -83,12 +89,14 @@ svg #wheel {
 	animation: scroll ease 1.5s infinite;
 }
 
+/* PDF plugin */
+
 embed {
 	display: flex;
     margin: auto;
     padding-top: 17px;
     width: 60vw;
-    height: 80vh;
+    height: 90vh;
 }
 
 /* --- Adaptive markup for small devices --- */
@@ -113,3 +121,10 @@ embed {
         font-size: 85%;
     }
 }
+
+/* Really small */
+/* @media screen and (max-width: 480px) {
+    body {
+        font-size: 75%;
+    }
+} */
