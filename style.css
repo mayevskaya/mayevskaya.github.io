@@ -18,6 +18,11 @@ div.block {
     align-items: center;
     justify-content: center;
 }
+div.block:not(:first-child) {
+    opacity: 0;
+    transition: all 1.6s ease-in-out;
+    pointer-events: none;
+}
 div.block:nth-child(2) {
     background: hsl(205, 84%, 14%);
     flex-direction: row;
@@ -67,6 +72,11 @@ a img {
 svg {
     position: relative;
     width: 30px;
+}
+.svg-icon {
+    opacity: 0.6;
+    transition: all 1.1s ease-in-out;
+    pointer-events: none;
 }
 
 .bottom-block {

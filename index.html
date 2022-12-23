@@ -20,7 +20,7 @@
         </div>
         <!-- Credit: https://codepen.io/bk4d/pen/oKZZBa -->
         <div class="bottom-block">
-            <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+            <svg class="svg-icon" width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
                 <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
                 <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
             </svg>
@@ -49,5 +49,31 @@
             <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=mayevskaya&repo=learningCode&theme=cobalt" />
         </a>
     </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+        requestAnimationFrame(function() {
+            var blocks = document.querySelectorAll('.block');
+            for (var i = 0; i < blocks.length; i++) {
+            var block = blocks[i];
+            var blockRect = block.getBoundingClientRect();
+            if (blockRect.top < window.innerHeight - 100 && blockRect.bottom > 100) {
+                block.style.opacity = '1';
+                block.style.pointerEvents = 'auto';
+                }
+            else block.style.opacity = '0';
+            }
+
+            var icon = document.querySelector('.svg-icon');
+            var svgRect = icon.getBoundingClientRect();
+            if (svgRect.top < window.innerHeight && svgRect.bottom > 200) {
+                icon.style.opacity = '0.6';
+                icon.style.pointerEvents = 'auto';
+            }
+            else icon.style.opacity = '0';
+        });
+    });
+
+    </script>
 </body>
 </html>
