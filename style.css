@@ -23,15 +23,19 @@ div.block:not(:first-child) {
     transition: all 1.6s ease-in-out;
     pointer-events: none;
 }
+div.block:nth-child(2) a{
+    display: none;
+}
 div.block:nth-child(2) {
     background: hsl(205, 84%, 14%);
     flex-direction: row;
 }
+div.block:nth-child(2) div { 
+    max-width: 63%;
+}
 div.block:nth-child(3) {
-    background: hsl(205, 90%, 22%);
     display: block;
 }
-
 h1 {
     display: inline-flex;
     text-transform: uppercase;
@@ -74,67 +78,81 @@ svg {
     width: 30px;
 }
 .svg-icon {
-    opacity: 0.6;
+    opacity: 0.9;
     transition: all 1.1s ease-in-out;
     pointer-events: none;
 }
 
 .bottom-block {
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
 }
 
 /* Wheel animation */
 /* Cred: https://codepen.io/bk4d/pen/oKZZBa */
 
 @keyframes scroll {
-	0% {
-		transform: translateY(0);
+    0% {
+        transform: translateY(0);
 	}
 	30% {
-		transform: translateY(100px);
+        transform: translateY(100px);
 	}
 }
 svg #wheel {
-	animation: scroll ease 1.5s infinite;
+    animation: scroll ease 1.5s infinite;
+}
+
+#portfolio img {
+    margin-top: 5px;
 }
 
 /* PDF plugin */
 
 embed {
-	display: flex;
+    display: flex;
     margin: auto;
     padding-top: 17px;
     width: 60vw;
     height: 90vh;
 }
 
-/* --- Adaptive markup for small devices --- */
-
-/* Wide */
-@media screen and (max-width: 1024px) {
-    body {
-        font-size: 105%;
-    }
+p {
+    text-align: justify; 
+    max-width: 90%; 
+    margin: auto; 
+    background-color: 
+    rgba(83, 82, 82, 0.483); 
+    padding: 15px;
+    border-radius: 15px; 
+    font-weight: 100;
 }
 
-/* Medium */
-@media screen and (max-width: 800px) {
-    body {
-        font-size: 95%;
-    }
-}
-
-/* Small */
+/* Mobile */
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 85%;
+    div.block h1 {
+        display: block;
+        text-align: center;
+        font-size: 4.15rem;
+        justify-items: space-between;
+        word-break:break-all;
+    }
+    div.block:nth-child(2) div { 
+        max-width: 95%;
+    }
+    p {
+        background: none;
+    }
+    embed {
+        display: none;
+    }
+    #portfolio img {
+        width: 97%;
+    }
+    div.block:nth-child(2) a {
+        display: block;
+    }
+    .svg-icon {
+        width: 80%;
     }
 }
-
-/* Really small */
-/* @media screen and (max-width: 480px) {
-    body {
-        font-size: 75%;
-    }
-} */
