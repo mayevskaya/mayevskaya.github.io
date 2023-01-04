@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function() {
 requestAnimationFrame(function() {
-    var blocks = document.querySelectorAll('.block');
+    var blocks = document.querySelectorAll('.scripted');
     for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
     var blockRect = block.getBoundingClientRect();
